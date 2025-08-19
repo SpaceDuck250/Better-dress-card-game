@@ -5,6 +5,7 @@ public class ContextScript : MonoBehaviour
 {
     public LocationScript currentlocation;
     public GameObject currentPhotographer;
+    public ModelScript currentmodel;
 
     public static ContextScript instance;
 

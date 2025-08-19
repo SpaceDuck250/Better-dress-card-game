@@ -125,6 +125,7 @@ public class PointsManagerScript : MonoBehaviour
             int cachedsum = clothing.basepoints;
             cachedsum += CalculatePoints(stylematches[clothing.clothingstyle]);
             cachedsum *= ContextScript.instance.currentlocation.TryBoost(clothing.clothingstyle);
+            cachedsum *= ContextScript.instance.currentmodel.TryBoost(clothing.clothingtype);
             finalscore += cachedsum;
 
             // Photographer bonus
