@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using TMPro;
 
+
 public class PointsManagerScript : MonoBehaviour
 {
     // Add a check to see if even all of the slots are taken like top bottom and shoes
@@ -47,7 +48,6 @@ public class PointsManagerScript : MonoBehaviour
         Debug.Log("work");
         Fill(); // For the selected clothing
         AddToBasket(); // For counting matches
-        CalculateBaseScore(); // Base score
         CalculateFinalScore(); // Final Score calculations
     }
 
@@ -88,19 +88,20 @@ public class PointsManagerScript : MonoBehaviour
 
     }
 
+    // Single calculations
     public int CalculatePoints(int matches)
     {
         if (matches == 1) // No Matches
         {
-            return -5*matches;
+            return -5;
         }
         else if (matches == 2) // 1 Match
         {
-            return 10*matches;
+            return 10;
         }
         else if (matches == 3) // 2 Matches
         {
-            return 20*matches;
+            return 20;
         }
         else // Other cases that idk
         {
@@ -108,19 +109,27 @@ public class PointsManagerScript : MonoBehaviour
         }
     }
 
+    // Final score calculation
     public void CalculateFinalScore()
     {
 
 
         finalscore = 0; // Might change base score depending on other stuff like game stuff
 
-        foreach (var style in stylematches)
+
+        // (BASE SCORE + STYLE MATCH POINTS) * LOCATION BOOST
+        // Storing the sum of style match points + base then * by location then adding that cachedsum to the final
+        foreach (ClothesScript clothing in clothingitems)
         {
-            finalscore += CalculatePoints(style.Value);
-            Debug.Log("Final score is: " + finalscore);
+            int cachedsum = clothing.basepoints;
+            cachedsum += CalculatePoints(stylematches[clothing.clothingstyle]);
+            cachedsum *= ContextScript.instance.currentlocation.TryBoost(clothing.clothingstyle);
+            finalscore += cachedsum;
+            Debug.Log("Final Score " + finalscore);
         }
 
-
+        // COLOUR MATCHES
+        // Finds max value of colourmatches then * the final score after all additions
         int maxvalue = 1;
         foreach (var colour in colourmatches)
         {
@@ -130,7 +139,6 @@ public class PointsManagerScript : MonoBehaviour
             }
         }
 
-        finalscore += basescore;
         finalscore *= maxvalue;
 
         if (finalscore < 0)
@@ -142,13 +150,6 @@ public class PointsManagerScript : MonoBehaviour
         scoretext.text = "Score: " + finalscore;
     }
 
-    public void CalculateBaseScore()
-    {
-        basescore = 0;
-        foreach (ClothesScript clothing in clothingitems)
-        {
-            basescore += clothing.basepoints;
-        }
-    }
+
 
 }
