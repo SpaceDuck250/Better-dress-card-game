@@ -4,6 +4,7 @@ using UnityEngine;
 public class ContextScript : MonoBehaviour
 {
     public LocationScript currentlocation;
+    public GameObject currentPhotographer;
 
     public static ContextScript instance;
 
@@ -11,4 +12,5 @@ public class ContextScript : MonoBehaviour
     {
         instance = this;
     }
+
 }

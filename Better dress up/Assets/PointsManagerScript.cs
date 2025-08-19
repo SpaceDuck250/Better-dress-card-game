@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using TMPro;
+using Unity.VisualScripting;
 
 
 public class PointsManagerScript : MonoBehaviour
@@ -125,6 +126,14 @@ public class PointsManagerScript : MonoBehaviour
             cachedsum += CalculatePoints(stylematches[clothing.clothingstyle]);
             cachedsum *= ContextScript.instance.currentlocation.TryBoost(clothing.clothingstyle);
             finalscore += cachedsum;
+
+            // Photographer bonus
+            if (ContextScript.instance.currentPhotographer.GetComponent<IAddPerItemPhotographer>() != null)
+            {
+                Debug.Log("added bonus to score");
+                finalscore += ContextScript.instance.currentPhotographer.GetComponent<IAddPerItemPhotographer>().SendPerItemBonus(clothing);
+            }
+            Debug.Log("Fi");
             Debug.Log("Final Score " + finalscore);
         }
 
@@ -140,6 +149,12 @@ public class PointsManagerScript : MonoBehaviour
         }
 
         finalscore *= maxvalue;
+
+        // Photographer bonus
+        if (ContextScript.instance.currentPhotographer.GetComponent<IAddTotalPhotographer>() != null)
+        {
+            finalscore += ContextScript.instance.currentPhotographer.GetComponent<IAddTotalPhotographer>().SendBonus(this);
+        }
 
         if (finalscore < 0)
         {

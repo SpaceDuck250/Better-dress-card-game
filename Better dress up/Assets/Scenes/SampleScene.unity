@@ -240,6 +240,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e779536f86c4e4bb5aaf81cec06c83, type: 3}
+--- !u!1 &196880146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196880147}
+  - component: {fileID: 196880148}
+  m_Layer: 0
+  m_Name: Daisy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &196880147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196880146}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1311922418}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &196880148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196880146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefe8c6d2d0670e43b80c9bc6fcffc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BonusAmount: 0
 --- !u!1 &199134039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,6 +1598,38 @@ Transform:
   - {fileID: 1853450340}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1311922417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311922418}
+  m_Layer: 0
+  m_Name: Photographers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1311922418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311922417}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.5502777, y: -2.0292215, z: -0.059801225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 196880147}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1346167838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7344969224024577027, guid: e6e779536f86c4e4bb5aaf81cec06c83, type: 3}
@@ -1725,7 +1802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 536f12bed76ffce40a4049509267a7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentlocation: {fileID: 1853450339}
+  currentlocation: {fileID: 1785368280}
+  currentPhotographer: {fileID: 196880146}
 --- !u!4 &2099348261
 Transform:
   m_ObjectHideFlags: 0
@@ -1863,3 +1941,4 @@ SceneRoots:
   - {fileID: 2027723405}
   - {fileID: 1305305945}
   - {fileID: 2099348261}
+  - {fileID: 1311922418}
