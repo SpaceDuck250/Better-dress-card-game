@@ -16,3 +16,4 @@ MonoBehaviour:
   clothingstyle: 2
   clothingcolour: 4
   basepoints: 10
+  pic: {fileID: 21300000, guid: 98097f97bf3ca9640ab84cb0f3f2fce0, type: 3}

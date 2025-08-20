@@ -28,6 +28,6 @@ public class TypesScript
         pink
     }
 
-
+    
 
 }

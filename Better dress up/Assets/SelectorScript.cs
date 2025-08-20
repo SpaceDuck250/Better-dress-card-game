@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class SelectorScript : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class SelectorScript : MonoBehaviour
 
     public List<GameObject> selectedobjlist = new List<GameObject>();
 
+    public UnityEvent OnClickNewItem;
+
     private void Update()
     {
         mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -21,6 +24,7 @@ public class SelectorScript : MonoBehaviour
         {
             BringCardUporDown(hit.gameObject);
             SenderScript.instance.Fill();
+            OnClickNewItem.Invoke();
         }
 
 

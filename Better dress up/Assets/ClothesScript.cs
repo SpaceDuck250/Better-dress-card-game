@@ -8,10 +8,7 @@ public class ClothesScript : MonoBehaviour
     {
         if (ClothingData != null)
         {
-            clothingtype = ClothingData.clothingtype;
-            clothingstyle = ClothingData.clothingstyle;
-            clothingcolour = ClothingData.clothingcolour;
-            basepoints = ClothingData.basepoints;
+            FillData();
         }
         else
         {
@@ -26,5 +23,15 @@ public class ClothesScript : MonoBehaviour
     public TypesScript.Clothingcolour clothingcolour;
 
     public int basepoints;
+
+    // Fills Data
+    public void FillData()
+    {
+        clothingtype = ClothingData.clothingtype;
+        clothingstyle = ClothingData.clothingstyle;
+        clothingcolour = ClothingData.clothingcolour;
+        basepoints = ClothingData.basepoints;
+        gameObject.GetComponent<SpriteRenderer>().sprite = ClothingData.pic;
+    }
 
 }

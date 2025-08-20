@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using TMPro;
-using Unity.VisualScripting;
 
 
 public class PointsManagerScript : MonoBehaviour
@@ -20,8 +19,6 @@ public class PointsManagerScript : MonoBehaviour
             colourmatches.Clear();
         }
     }
-
-    public TextMeshProUGUI scoretext;
 
     public UnityEvent OnCalculate;
 
@@ -162,10 +159,14 @@ public class PointsManagerScript : MonoBehaviour
             finalscore = 0;
         }
 
-        Debug.Log("Final score is: " + finalscore);
-        scoretext.text = "Score: " + finalscore;
+
+        StatSetterScript.instance.SetScore(finalscore);
     }
 
-
+    public int CalculateMoney()
+    {
+        int moneymade = finalscore - StatSetterScript.instance.target;
+        return moneymade;
+    }
 
 }

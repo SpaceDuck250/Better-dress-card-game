@@ -15,3 +15,4 @@ MonoBehaviour:
   modelname: Person
   boosttype: 0
   boostamount: 2
+  modelcost: 5

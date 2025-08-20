@@ -10,4 +10,8 @@ public class ClothingData : ScriptableObject
     public TypesScript.Clothingcolour clothingcolour;
 
     public int basepoints;
+
+    public Sprite pic;
+
+
 }

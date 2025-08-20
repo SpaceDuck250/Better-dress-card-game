@@ -7,4 +7,5 @@ public class Location : ScriptableObject
     public Sprite LocationImage;
     public int boostamount;
     public TypesScript.Clothingstyle styleboosted;
+    public int locationcost;
 }

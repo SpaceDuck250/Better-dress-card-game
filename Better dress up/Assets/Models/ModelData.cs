@@ -6,4 +6,5 @@ public class ModelData : ScriptableObject
     public string modelname;
     public TypesScript.Clothingtype boosttype;
     public int boostamount;
+    public int modelcost;
 }
