@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 
 //For the games current location, photographer, model, etc;
 public class ContextScript : MonoBehaviour
 {
+    public GameObject currentlocationobj;
+    public GameObject currentmodelobj;
+
     public LocationScript currentlocation;
     public GameObject currentPhotographer;
     public ModelScript currentmodel;
@@ -19,18 +21,28 @@ public class ContextScript : MonoBehaviour
     //money
     public int currentbalance = 0;
 
+    public int currentround = 0;
+
     public static ContextScript instance;
 
     private void Awake() // Add a singleton
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
 
-    // Remove those items from our inventory + give money
-    public void OnClothingSubmit()
+    private void Start()
     {
-        currentbalance += PointsManagerScript.instance.CalculateMoney();
-        SceneManager.LoadScene("Shop");
+        currentlocation = currentlocationobj.GetComponent<LocationScript>();
+        currentmodel = currentmodelobj.GetComponent<ModelScript>();
     }
 
 

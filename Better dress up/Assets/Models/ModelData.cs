@@ -7,4 +7,5 @@ public class ModelData : ScriptableObject
     public TypesScript.Clothingtype boosttype;
     public int boostamount;
     public int modelcost;
+    public Sprite modelpic;
 }

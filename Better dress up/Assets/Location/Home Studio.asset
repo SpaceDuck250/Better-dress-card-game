@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Home Studio
   m_EditorClassIdentifier: 
   LocationName: Home Studio
-  LocationImage: {fileID: 0}
+  LocationImage: {fileID: 5624952037621705901, guid: fb85a7541b660a24ab3631726a1ef0ab, type: 3}
   boostamount: 1
   styleboosted: 0
   locationcost: 10

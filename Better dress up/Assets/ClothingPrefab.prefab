@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6441729478667749231}
   - component: {fileID: 7334019875820212486}
   m_Layer: 0
-  m_Name: Red Aries Sneakers (Template)
+  m_Name: ClothingPrefab
   m_TagString: card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

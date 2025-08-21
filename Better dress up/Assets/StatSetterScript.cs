@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class StatSetterScript : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class StatSetterScript : MonoBehaviour
 
     private void Start()
     {
-        round = 1;
+        round = ContextScript.instance.currentround;
         SetTargetScore();
         //SetStats();
     }
@@ -58,9 +59,12 @@ public class StatSetterScript : MonoBehaviour
         scorebutton.SetActive(false);
     }
 
-    // Set the money text to the amount of money when we click the score button
-    public void GivePayCheck()
+    // Set the money text to the amount of money when we click the score button and do other stuff like go to shop
+    public void SubmitButton()
     {
+        ContextScript.instance.currentbalance += PointsManagerScript.instance.CalculateMoney();
         moneytext.text = "money: " + ContextScript.instance.currentbalance;
+        ContextScript.instance.currentround++;
+        SceneManager.LoadScene("Shop");
     }
 }

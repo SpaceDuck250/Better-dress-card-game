@@ -13,5 +13,5 @@ public class ClothingData : ScriptableObject
 
     public Sprite pic;
 
-
+    public int cost;
 }

@@ -4,4 +4,5 @@ using UnityEngine;
 public class PhotographerData : ScriptableObject
 {
     public int photographercost;
+    public Sprite pic;
 }

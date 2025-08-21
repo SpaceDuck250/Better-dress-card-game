@@ -17,3 +17,4 @@ MonoBehaviour:
   clothingcolour: 3
   basepoints: 5
   pic: {fileID: 21300000, guid: b24387bc3611fc7468e5ecf6f40cebfd, type: 3}
+  cost: 10
