@@ -1997,51 +1997,11 @@ Transform:
   - {fileID: 2067074729}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1785368278
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1785368279}
-  - component: {fileID: 1785368280}
-  m_Layer: 0
-  m_Name: Nature Trail
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1785368279
+--- !u!4 &1785368279 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+  m_PrefabInstance: {fileID: 5330946867675249675}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785368278}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1305305945}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1785368280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785368278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27601811ada448741ac061ae274f2af3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  location: {fileID: 11400000, guid: 51d4d1c1b7071234582ed46830a03208, type: 2}
 --- !u!4 &1838364535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7344969224024577027, guid: e6e779536f86c4e4bb5aaf81cec06c83, type: 3}
@@ -2374,11 +2334,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b143ed3b98324264da84b1ae8cbe8d1c, type: 2}
   notownedmodeldatas: []
   notownedlocationdatas:
-  - {fileID: 11400000, guid: 411f1cb9f1daf414ab984acfce668859, type: 2}
   - {fileID: 11400000, guid: 51d4d1c1b7071234582ed46830a03208, type: 2}
   notownedphotographerdatas: []
   ownedclothingdatas: []
   currentbalance: 0
+  currentround: 0
 --- !u!4 &2099348261
 Transform:
   m_ObjectHideFlags: 0
@@ -2617,6 +2577,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3572084683a47d146ae9cffec0cb6888, type: 3}
+--- !u!1001 &5330946867675249675
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1305305945}
+    m_Modifications:
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430608736993360731, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6668838330201422103, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
+      propertyPath: m_Name
+      value: Nature Trail
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbf0a61a2a0f11848898531be4aac334, type: 3}
 --- !u!1001 &7442761819325825551
 PrefabInstance:
   m_ObjectHideFlags: 0

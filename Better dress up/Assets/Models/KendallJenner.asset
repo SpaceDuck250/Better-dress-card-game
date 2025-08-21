@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe44e62948bff943a5004d5cc3c8eaf, type: 3}
+  m_Name: KendallJenner
+  m_EditorClassIdentifier: 
+  modelname: Kendall Jenner
+  boosttype: 0
+  boostamount: 2
+  modelcost: 20
+  modelpic: {fileID: 0}

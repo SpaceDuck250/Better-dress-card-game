@@ -12,11 +12,15 @@ public class ContextScript : MonoBehaviour
     public ModelScript currentmodel;
 
     public List<ClothingData> notownedclothingdatas = new List<ClothingData>();
+
+
     public List<ModelData> notownedmodeldatas = new List<ModelData>();
     public List<Location> notownedlocationdatas = new List<Location>();
-    public List<PhotographerData> notownedphotographerdatas = new List<PhotographerData>();
+    public List<GameObject> notownedphotographerdatas = new List<GameObject>();
 
     public List<ClothingData> ownedclothingdatas = new List<ClothingData>();
+
+    
 
     //money
     public int currentbalance = 0;

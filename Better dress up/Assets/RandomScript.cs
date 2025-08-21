@@ -19,6 +19,8 @@ public class RandomScript : MonoBehaviour
     {
         GenerateRandomItems();
         GenerateRandomLocation();
+        //GenerateRandomModel();
+        //GenerateRandomPhotographer();
     }
 
     // Like the old system we made, dynamically make each and change stats after
@@ -74,10 +76,10 @@ public class RandomScript : MonoBehaviour
     public void GenerateRandomPhotographer()
     {
         int randomindex = Random.Range(0, ContextScript.instance.notownedphotographerdatas.Count);
-        photographertemplate.GetComponent<PhotographerScript>().PhotographerData = ContextScript.instance.notownedphotographerdatas[randomindex];
-        photographertemplate.GetComponent<IBuyable>().FillData(photographertemplate);
+        photographertemplate.GetComponent<PhotographerScript>().PhotographerData = ContextScript.instance.notownedphotographerdatas[randomindex].GetComponent<PhotographerScript>().PhotographerData;
+        photographertemplate.GetComponent<IBuyable>().FillData(ContextScript.instance.notownedphotographerdatas[randomindex]);
 
-        photographertemplate.GetComponent<SpriteRenderer>().sprite = ContextScript.instance.notownedphotographerdatas[randomindex].pic;
+        photographertemplate.GetComponent<SpriteRenderer>().sprite = ContextScript.instance.notownedphotographerdatas[randomindex].GetComponent<PhotographerScript>().PhotographerData.pic;
 
     }
 }
