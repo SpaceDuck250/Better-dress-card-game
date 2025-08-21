@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 135e6b8cd139eab4aa6cbe04da1f459d, type: 3}
-  m_Name: Daisy
+  m_Name: Johnny
   m_EditorClassIdentifier: 
-  photographercost: 20
-  pic: {fileID: 2466274698125019711, guid: 6475da93992b6e4408ae946ef6060aa3, type: 3}
+  photographercost: 50
+  pic: {fileID: -9100847946970319925, guid: cafa92760e8ecb841ab76fb78fbdae55, type: 3}

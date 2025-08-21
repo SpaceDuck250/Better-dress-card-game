@@ -19,8 +19,8 @@ public class RandomScript : MonoBehaviour
     {
         GenerateRandomItems();
         GenerateRandomLocation();
-        //GenerateRandomModel();
-        //GenerateRandomPhotographer();
+        GenerateRandomModel();
+        GenerateRandomPhotographer();
     }
 
     // Like the old system we made, dynamically make each and change stats after

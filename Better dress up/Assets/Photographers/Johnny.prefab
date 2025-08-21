@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6668838330201422103
+--- !u!1 &5945120640133229481
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5430608736993360731}
-  - component: {fileID: 1541658589164106603}
+  - component: {fileID: 7891162451918608316}
+  - component: {fileID: 262959144559063692}
+  - component: {fileID: 1461264466853359305}
   m_Layer: 0
-  m_Name: Nature Trail
+  m_Name: Johnny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5430608736993360731
+--- !u!4 &7891162451918608316
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6668838330201422103}
+  m_GameObject: {fileID: 5945120640133229481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,16 +33,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1541658589164106603
+--- !u!114 &262959144559063692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6668838330201422103}
+  m_GameObject: {fileID: 5945120640133229481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27601811ada448741ac061ae274f2af3, type: 3}
+  m_Script: {fileID: 11500000, guid: f1d114fc2847e624a9020d719489fde1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location: {fileID: 11400000, guid: 51d4d1c1b7071234582ed46830a03208, type: 2}
+  PhotographerData: {fileID: 11400000, guid: 3bdb1c4479c456748a20b3ba095d97de, type: 2}
+--- !u!114 &1461264466853359305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945120640133229481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefe8c6d2d0670e43b80c9bc6fcffc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BonusAmount: 9

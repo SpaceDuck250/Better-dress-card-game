@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BuyPhotographer : MonoBehaviour
+public class BuyPhotographer : MonoBehaviour, IBuyable
 {
     public int cost;
     public GameObject photographerobj;

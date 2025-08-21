@@ -16,3 +16,4 @@ MonoBehaviour:
   boosttype: 0
   boostamount: 2
   modelcost: 5
+  modelpic: {fileID: 21300000, guid: 5b803c3240ebff44b8d5c29e40e79627, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: KendallJenner
   m_EditorClassIdentifier: 
   modelname: Kendall Jenner
-  boosttype: 0
-  boostamount: 2
+  boosttype: 1
+  boostamount: 4
   modelcost: 20
-  modelpic: {fileID: 0}
+  modelpic: {fileID: 21300000, guid: c409c805eea5d4743938d0c77c8c60eb, type: 3}
