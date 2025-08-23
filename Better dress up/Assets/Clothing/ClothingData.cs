@@ -13,5 +13,13 @@ public class ClothingData : ScriptableObject
 
     public Sprite pic;
 
+    public Sprite applypic;
+
+    public int sortinglayer;
+
     public int cost;
+
+    public Transform settransform;
+
+
 }

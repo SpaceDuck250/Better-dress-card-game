@@ -20,7 +20,9 @@ public class ContextScript : MonoBehaviour
 
     public List<ClothingData> ownedclothingdatas = new List<ClothingData>();
 
-    
+    public List<ClothingData> selectedclothes = new List<ClothingData>();
+
+
 
     //money
     public int currentbalance = 0;

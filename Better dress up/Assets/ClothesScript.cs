@@ -31,7 +31,10 @@ public class ClothesScript : MonoBehaviour
         clothingstyle = ClothingData.clothingstyle;
         clothingcolour = ClothingData.clothingcolour;
         basepoints = ClothingData.basepoints;
-        gameObject.GetComponent<SpriteRenderer>().sprite = ClothingData.pic;
+        if (gameObject.GetComponent<SpriteRenderer>() != null)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = ClothingData.pic;
+        }
     }
 
 }

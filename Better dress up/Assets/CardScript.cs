@@ -5,7 +5,7 @@ public class CardScript : MonoBehaviour
     public bool up = false;
     public Vector3 startpos;
     public float upamount;
-    Vector3 Destination;
+    public Vector3 Destination;
     public float smoothvalue;
 
     private void Start()

@@ -6,7 +6,7 @@ public class Daisy : MonoBehaviour, IAddPerItemPhotographer
 
     public int SendPerItemBonus(ClothesScript clothing)
     {
-        if (clothing.clothingcolour == TypesScript.Clothingcolour.white)
+        if (clothing.clothingcolour == TypesScript.Clothingcolour.pink)
         {
             return BonusAmount;
         }

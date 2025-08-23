@@ -14,6 +14,13 @@ public class SelectorScript : MonoBehaviour
 
     public UnityEvent OnClickNewItem;
 
+    public static SelectorScript instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Update()
     {
         mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -41,6 +48,7 @@ public class SelectorScript : MonoBehaviour
             selectedobj = hit.gameObject.GetComponent<CardScript>();
             selectedobj.GoDown();
             selectedobjlist.Remove(selectedobj.gameObject);
+            //selectedobjlist.RemoveAll(n => n.gameObject == selectedobj.gameObject);
             selectedobj = null;
         }
         else if (TypeAlreadyExists(hit))
@@ -69,16 +77,31 @@ public class SelectorScript : MonoBehaviour
     // Checks if we already have a clothing type so we can switch out
     public bool TypeAlreadyExists(GameObject newitem)
     {
+        
+
         foreach (GameObject clothing in selectedobjlist)
         {
+
             if (clothing.GetComponent<ClothesScript>().clothingtype == newitem.GetComponent<ClothesScript>().clothingtype)
             {
                 clothing.GetComponent<CardScript>().GoDown();
                 selectedobjlist.Remove(clothing);
                 return true;
             }
+
+            //if (clothing.GetComponent<ClothesScript>().clothingtype == newitem.GetComponent<ClothesScript>().ClothingData.secondclothingtype)
+            //{
+            //    clothing.GetComponent<CardScript>().GoDown();
+            //    selectedobjlist.Remove(clothing);
+            //    selectedobjlist.Add(newitem);
+            //    check++;
+            //    continue;
+            //}
+
         }
 
         return false;
+        
+        
     }
 }

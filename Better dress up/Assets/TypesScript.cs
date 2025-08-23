@@ -4,6 +4,7 @@ public class TypesScript
 {
     public enum Clothingtype
     {
+        dress,
         top,
         bottom,
         shoes,
@@ -21,11 +22,8 @@ public class TypesScript
     public enum Clothingcolour
     { 
         red,
-        green,
-        blue,
-        black,
-        white,
-        pink
+        pink,
+        purple
     }
 
     

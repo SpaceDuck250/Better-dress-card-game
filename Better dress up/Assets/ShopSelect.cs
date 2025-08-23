@@ -7,18 +7,21 @@ public class ShopSelect : MonoBehaviour
     public IBuyable buyable;
 
     public GameObject buypanel;
+    public bool isSelectingItem = false;
 
     private void Update()
     {
         mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isSelectingItem)
         {
             Collider2D hit = Physics2D.OverlapPoint(mousepos);
             if ((hit != null && hit.gameObject.tag == "shopitem")) // Calls the try buy function (interface)
             {
                 buyable = hit.GetComponent<IBuyable>();
+                isSelectingItem = true;
                 buypanel.SetActive(true);
+                
             }
         }
 
@@ -40,6 +43,7 @@ public class ShopSelect : MonoBehaviour
 
     public void CloseBuyPanel()
     {
+        isSelectingItem = false;
         buypanel.SetActive(false);
     }
 

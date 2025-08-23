@@ -97,7 +97,7 @@ public class PointsManagerScript : MonoBehaviour
         {
             return 10;
         }
-        else if (matches == 3) // 2 Matches
+        else if (matches >= 3) // 2 Matches
         {
             return 20;
         }

@@ -65,6 +65,23 @@ public class StatSetterScript : MonoBehaviour
         ContextScript.instance.currentbalance += PointsManagerScript.instance.CalculateMoney();
         moneytext.text = "money: " + ContextScript.instance.currentbalance;
         ContextScript.instance.currentround++;
+
+        DoItemLogic();
+
         SceneManager.LoadScene("Shop");
+    }
+
+    public void DoItemLogic()
+    {
+        foreach (ClothesScript selected in SenderScript.instance.clothesselection)
+        {
+            ContextScript.instance.notownedclothingdatas.Add(selected.ClothingData);
+            ContextScript.instance.selectedclothes.Remove(selected.ClothingData);
+        }
+
+        foreach (ClothingData unselected in ContextScript.instance.selectedclothes)
+        {
+            ContextScript.instance.ownedclothingdatas.Add(unselected);
+        }
     }
 }
