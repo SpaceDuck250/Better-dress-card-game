@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b478104207f263c40af1a81a8a0da4c5, type: 3}
+  m_Name: Purple Earing
+  m_EditorClassIdentifier: 
+  clothingtype: 4
+  clothingstyle: 2
+  clothingcolour: 2
+  basepoints: 30
+  pic: {fileID: 21300000, guid: 3aa4c96bac19eff4ba4e69cfcba0ec4a, type: 3}
+  applypic: {fileID: 21300000, guid: a4b5a10625f35084786f17a45c8fb82e, type: 3}
+  sortinglayer: 3
+  cost: 10
+  settransform: {fileID: 913700744324485613, guid: fd3ec7cde27e92b4e9599e7f8ea494a3, type: 3}
+  smalladjustments: {x: -0.12, y: 0.55, z: 0}
