@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Pink Goth Boots
   m_EditorClassIdentifier: 
   clothingtype: 3
-  isDress: 0
   clothingstyle: 1
   clothingcolour: 1
   basepoints: 10
   pic: {fileID: 21300000, guid: 6dd35ca7826638b41b58bd0226a9eb09, type: 3}
+  applypic: {fileID: 21300000, guid: 12aeeb18837db5848a3f63052d5bc663, type: 3}
+  sortinglayer: 0
   cost: 10
+  settransform: {fileID: 4910358816239914364, guid: 01993b00bc52bb14ca29741dfa1d3748, type: 3}

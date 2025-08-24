@@ -21,5 +21,7 @@ public class ClothingData : ScriptableObject
 
     public Transform settransform;
 
+    public Vector3 smalladjustments;
+
 
 }

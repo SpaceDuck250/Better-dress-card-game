@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Purple Goth Skirt
   m_EditorClassIdentifier: 
   clothingtype: 2
-  isDress: 0
   clothingstyle: 1
   clothingcolour: 2
   basepoints: 10
   pic: {fileID: 21300000, guid: 744ba26172f01f342814b1ff92a9a66e, type: 3}
+  applypic: {fileID: 21300000, guid: b27e3d2d991c16b41a674e7ce8b111f2, type: 3}
+  sortinglayer: 1
   cost: 10
+  settransform: {fileID: 2394203528547707157, guid: 0331dc7dda6f15e41b15d3e4f0248cd0, type: 3}
+  smalladjustments: {x: 0.06, y: -0.07, z: 0}

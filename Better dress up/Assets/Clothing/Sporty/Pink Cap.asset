@@ -21,3 +21,4 @@ MonoBehaviour:
   sortinglayer: 3
   cost: 10
   settransform: {fileID: 8496003346216877446, guid: a8a62d56b041ba043bee0e810873b2ef, type: 3}
+  smalladjustments: {x: 0.08, y: -0.05, z: 0}

@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Pink Goth Skirt
   m_EditorClassIdentifier: 
   clothingtype: 2
-  isDress: 0
   clothingstyle: 1
   clothingcolour: 1
   basepoints: 10
   pic: {fileID: 21300000, guid: 19369c10790744c4eb0ef376809d66ae, type: 3}
+  applypic: {fileID: 21300000, guid: 9bcbd46842f49a44a8d4fa7a8abc7ecf, type: 3}
+  sortinglayer: 1
   cost: 10
+  settransform: {fileID: 2394203528547707157, guid: 0331dc7dda6f15e41b15d3e4f0248cd0, type: 3}

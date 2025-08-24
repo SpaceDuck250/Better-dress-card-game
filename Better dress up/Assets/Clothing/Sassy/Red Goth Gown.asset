@@ -17,4 +17,8 @@ MonoBehaviour:
   clothingcolour: 0
   basepoints: 20
   pic: {fileID: 21300000, guid: fc8a3c9bbd759ba4290dd0eaf87d54dc, type: 3}
+  applypic: {fileID: 21300000, guid: efc96e2c239774a46b52e2f20d1d76f6, type: 3}
+  sortinglayer: 0
   cost: 10
+  settransform: {fileID: 4310913336722227225, guid: 035f7e7ddb415044eb845e0bea7d541a, type: 3}
+  smalladjustments: {x: 0.05, y: 0, z: 0}

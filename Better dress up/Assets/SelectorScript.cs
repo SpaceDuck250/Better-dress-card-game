@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Events;
+using System.Linq;
 
 public class SelectorScript : MonoBehaviour
 {
@@ -50,6 +51,9 @@ public class SelectorScript : MonoBehaviour
             selectedobjlist.Remove(selectedobj.gameObject);
             //selectedobjlist.RemoveAll(n => n.gameObject == selectedobj.gameObject);
             selectedobj = null;
+
+
+           
         }
         else if (TypeAlreadyExists(hit))
         {
@@ -57,13 +61,30 @@ public class SelectorScript : MonoBehaviour
             selectedobj = hit.gameObject.GetComponent<CardScript>();
             selectedobj.GoUp();
             selectedobjlist.Add(hit);
+
+            
+
         }
         else
         {
             selectedobj = hit.gameObject.GetComponent<CardScript>();
             selectedobj.GoUp();
             selectedobjlist.Add(hit);
+
+            if (hit.GetComponent<ClothesScript>().clothingtype == TypesScript.Clothingtype.dress)
+            {
+                RemoveType(TypesScript.Clothingtype.top);
+                RemoveType(TypesScript.Clothingtype.bottom);
+            }
+            else if (hit.GetComponent<ClothesScript>().clothingtype == TypesScript.Clothingtype.top || hit.GetComponent<ClothesScript>().clothingtype == TypesScript.Clothingtype.bottom)
+            {
+                RemoveType(TypesScript.Clothingtype.dress);
+            }
+
+
         }
+
+
 
         // if the card is up then set that to selected card then bring it down
         // if the new card is same type then go to our list to remove old card of same type
@@ -77,7 +98,7 @@ public class SelectorScript : MonoBehaviour
     // Checks if we already have a clothing type so we can switch out
     public bool TypeAlreadyExists(GameObject newitem)
     {
-        
+
 
         foreach (GameObject clothing in selectedobjlist)
         {
@@ -101,7 +122,26 @@ public class SelectorScript : MonoBehaviour
         }
 
         return false;
-        
-        
+
+
     }
+
+
+    // no pants and shirt when having dress
+    public void RemoveType(TypesScript.Clothingtype type)
+    {
+        foreach (GameObject n in selectedobjlist)
+        {
+            if (n.gameObject.GetComponent<ClothesScript>().clothingtype == type)
+            {
+                n.GetComponent<CardScript>().GoDown();
+                selectedobjlist.Remove(n);
+                return;
+            }
+
+
+        }
+    }
+
+    
 }

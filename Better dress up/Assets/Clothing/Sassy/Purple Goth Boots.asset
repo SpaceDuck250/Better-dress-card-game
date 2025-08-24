@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Purple Goth Boots
   m_EditorClassIdentifier: 
   clothingtype: 3
-  isDress: 0
   clothingstyle: 1
   clothingcolour: 2
   basepoints: 10
   pic: {fileID: 21300000, guid: 998e5254364ef86498b90e0888dbceb4, type: 3}
+  applypic: {fileID: 21300000, guid: be643b68d3258594b90a42aedd0f1ab9, type: 3}
+  sortinglayer: 0
   cost: 10
+  settransform: {fileID: 4910358816239914364, guid: 01993b00bc52bb14ca29741dfa1d3748, type: 3}
+  smalladjustments: {x: -0.16, y: 0, z: 0}

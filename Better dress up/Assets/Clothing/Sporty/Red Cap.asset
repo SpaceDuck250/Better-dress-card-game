@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b478104207f263c40af1a81a8a0da4c5, type: 3}
+  m_Name: Red Cap
+  m_EditorClassIdentifier: 
+  clothingtype: 4
+  clothingstyle: 0
+  clothingcolour: 0
+  basepoints: 20
+  pic: {fileID: 21300000, guid: 39377939b95affd45b7722b70a39e291, type: 3}
+  applypic: {fileID: 21300000, guid: a10ab60bd5e4fd94fa67b19c9873a550, type: 3}
+  sortinglayer: 3
+  cost: 10
+  settransform: {fileID: 8496003346216877446, guid: a8a62d56b041ba043bee0e810873b2ef, type: 3}
+  smalladjustments: {x: 0.09, y: -0.14, z: 0}

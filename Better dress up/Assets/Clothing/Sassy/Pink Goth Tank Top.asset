@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Pink Goth Tank Top
   m_EditorClassIdentifier: 
   clothingtype: 1
-  isDress: 0
   clothingstyle: 1
   clothingcolour: 1
   basepoints: 10
   pic: {fileID: 21300000, guid: 0555478aa43074d409bd229d77a5e799, type: 3}
+  applypic: {fileID: 21300000, guid: 8b6d2d1447032784a849a2a92ec276a8, type: 3}
+  sortinglayer: 0
   cost: 10
+  settransform: {fileID: 6345358806829362596, guid: cefe2760b3d8b0b418ef90e6b5b09c7e, type: 3}

@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Red Goth Tank Top
   m_EditorClassIdentifier: 
   clothingtype: 1
-  isDress: 0
   clothingstyle: 1
   clothingcolour: 0
   basepoints: 10
   pic: {fileID: 21300000, guid: 2635ba966c234914587ef039dcb28eff, type: 3}
+  applypic: {fileID: 21300000, guid: ac203c86dd8c6714bb8f17d963abaabc, type: 3}
+  sortinglayer: 0
   cost: 10
+  settransform: {fileID: 6345358806829362596, guid: cefe2760b3d8b0b418ef90e6b5b09c7e, type: 3}
+  smalladjustments: {x: -0.27, y: 0, z: 0}
