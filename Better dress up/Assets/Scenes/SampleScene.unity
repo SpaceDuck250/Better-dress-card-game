@@ -2658,12 +2658,12 @@ MonoBehaviour:
   ownedclothingdatas: []
   selectedclothes:
   - {fileID: 11400000, guid: c7280cd770c281a4999845c42eb0ac10, type: 2}
-  - {fileID: 11400000, guid: eaf534febc8b31e4c960a4210a347661, type: 2}
-  - {fileID: 11400000, guid: 86a4d1af27caeb542841c6bff5ccc8b7, type: 2}
-  - {fileID: 11400000, guid: a41eac2312bde534e88aee2d230e3d92, type: 2}
   - {fileID: 11400000, guid: 6616640ecad237449af7cddda132ff1b, type: 2}
-  - {fileID: 11400000, guid: 3559968b52d02344da8847d9bac0f2f1, type: 2}
-  - {fileID: 11400000, guid: d8761d16738ee974282c61038fb6ed66, type: 2}
+  - {fileID: 11400000, guid: 30774fc9b6636dc42af0ff47ef855525, type: 2}
+  - {fileID: 11400000, guid: 1a432c13a87f8e440ae285b360c39e1d, type: 2}
+  - {fileID: 11400000, guid: 0c5cf362aafa29245a4f0f13451a5caf, type: 2}
+  - {fileID: 11400000, guid: b539f734da112dd42abd1e7405ed4492, type: 2}
+  - {fileID: 11400000, guid: bff9d9470f2733445a06ecd9b77fb3b7, type: 2}
   currentbalance: 0
   currentround: 0
 --- !u!4 &2099348261
