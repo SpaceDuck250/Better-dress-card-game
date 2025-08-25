@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 
 public class SelectScript : MonoBehaviour
@@ -13,7 +14,6 @@ public class SelectScript : MonoBehaviour
     public static SelectScript instance;
 
     public GameObject SubmitButton;
-
     private void Awake()
     {
         instance = this;

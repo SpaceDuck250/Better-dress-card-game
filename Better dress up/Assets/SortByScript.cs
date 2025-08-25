@@ -8,5 +8,12 @@ public class SortByScript : MonoBehaviour
     {
         SelectScript.instance.selectedClothes.Clear();
         ItemGeneratorScript.instance.SortBy(sorttype);
+        SelectScript.instance.SubmitButton.SetActive(false);
+    }
+
+    // Pass its gameobject to the anim
+    public void PassGameObject()
+    {
+        SortAnimScript.instance.OnSelectNew(gameObject);
     }
 }

@@ -50,7 +50,7 @@ public class ItemGeneratorScript : MonoBehaviour
             newclothingitem.GetComponent<ClothesScript>().FillData();
             newclothingitem.GetComponent<Image>().sprite = clothing.pic;
 
-            newclothingrect.position += new Vector3(xindex * 200, yindex * -270f, 0);
+            newclothingrect.position += new Vector3(xindex * 200, yindex * -295f, 0);
 
             GameObject cacheddata = newclothingitem;
             newclothingitem.GetComponent<Button>().onClick.AddListener(() => { SelectScript.instance.TryAdd(cacheddata); });
@@ -66,7 +66,7 @@ public class ItemGeneratorScript : MonoBehaviour
             newclothingitem.SetActive(true);
 
             xindex++;
-            if (xindex == 3)
+            if (xindex == 4)
             {
                 xindex = 0;
                 yindex++;
@@ -79,19 +79,23 @@ public class ItemGeneratorScript : MonoBehaviour
 
     public void ClearContainer()
     {
-        foreach (Transform child in container)
+        int i = 0;
+        foreach (RectTransform child in container)
         {
-            if (child.tag == "ignore")
+            if (i == 0)
             {
+                i++;
                 continue;
             }
             Destroy(child.gameObject);
+            
         }
     }
 
     public void SortBy(sorttype sortby) // yeah yeah i know i could use interfaces
     {
         sortedclothes.Clear();
+        ClearContainer();
 
         if (sortby == sorttype.colour)
         {
