@@ -23,6 +23,11 @@ public class ContextScript : MonoBehaviour
     public List<ClothingData> selectedclothes = new List<ClothingData>();
 
 
+    public List<ClothingData> allshoes = new List<ClothingData>();
+    public List<ClothingData> alldresses = new List<ClothingData>();
+    public List<ClothingData> allelse = new List<ClothingData>();
+
+
 
     //money
     public int currentbalance = 0;
@@ -49,6 +54,44 @@ public class ContextScript : MonoBehaviour
     {
         currentlocation = currentlocationobj.GetComponent<LocationScript>();
         currentmodel = currentmodelobj.GetComponent<ModelScript>();
+
+        Randomize(allshoes, 2, 1);
+        Randomize(alldresses, 1, 1);
+        Randomize(allelse, 2, 1);
+
+        
+
+    }
+
+    public void Randomize(List<ClothingData> clothings, int amountselect, int amountowned)
+    {
+        if (amountselect > 0)
+        {
+            for (int i = 0; i < amountselect; i++)
+            {
+                int randomindex = Random.Range(0, clothings.Count);
+                selectedclothes.Add(clothings[randomindex]);
+                clothings.RemoveAt(randomindex);
+            }
+        }
+
+        if (amountowned > 0)
+        {
+            for (int i = 0; i < amountowned; i++)
+            {
+                int randomindex = Random.Range(0, clothings.Count);
+                ownedclothingdatas.Add(clothings[randomindex]);
+                clothings.RemoveAt(randomindex);
+            }
+        }
+
+
+        foreach (ClothingData clothing in clothings)
+        {
+            notownedclothingdatas.Add(clothing);
+        }
+
+        clothings.Clear();
     }
 
 

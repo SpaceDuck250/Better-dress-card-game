@@ -11,6 +11,8 @@ public class SelectorScript : MonoBehaviour
     public CardScript selectedobj;
     public bool flipbool = false;
 
+    public bool isPaused = false;
+
     public List<GameObject> selectedobjlist = new List<GameObject>();
 
     public UnityEvent OnClickNewItem;
@@ -25,16 +27,19 @@ public class SelectorScript : MonoBehaviour
     private void Update()
     {
         mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        Collider2D hit = Physics2D.OverlapPoint(mousepos);
-
-        if (hit != null && hit.gameObject.tag == "card" && Input.GetKeyDown(KeyCode.Mouse0))
+        if (!isPaused)
         {
-            BringCardUporDown(hit.gameObject);
-            SenderScript.instance.Fill();
-            OnClickNewItem.Invoke();
-        }
+            Collider2D hit = Physics2D.OverlapPoint(mousepos);
 
+
+
+            if (hit != null && hit.gameObject.tag == "card" && Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                BringCardUporDown(hit.gameObject);
+                SenderScript.instance.Fill();
+                OnClickNewItem.Invoke();
+            }
+        }
 
     }
 

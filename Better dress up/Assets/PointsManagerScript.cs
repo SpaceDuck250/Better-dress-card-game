@@ -165,7 +165,7 @@ public class PointsManagerScript : MonoBehaviour
 
     public int CalculateMoney()
     {
-        int moneymade = finalscore - StatSetterScript.instance.target;
+        int moneymade = Mathf.RoundToInt((finalscore - StatSetterScript.instance.target)/2);
         return moneymade;
     }
 

@@ -5,6 +5,13 @@ public class GeneratorScript : MonoBehaviour
     public GameObject template;
     public Transform container;
 
+    public static GeneratorScript instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

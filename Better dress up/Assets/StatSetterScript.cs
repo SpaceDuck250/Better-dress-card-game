@@ -12,6 +12,9 @@ public class StatSetterScript : MonoBehaviour
     public int target;
     public GameObject scorebutton;
 
+    public GameObject winscreen;
+    public TextMeshProUGUI wintext;
+
     public static StatSetterScript instance;
 
     private void Awake()
@@ -30,7 +33,7 @@ public class StatSetterScript : MonoBehaviour
     public void SetTargetScore()
     {
         target = ContextScript.instance.currentPhotographer.GetComponent<PhotographerScript>().PhotographerData.photographercost + ContextScript.instance.currentmodel.ModelData.modelcost + ContextScript.instance.currentlocation.location.locationcost;
-        target *= round;
+        target = Mathf.RoundToInt(target * round * 1.12f);
         targettext.text = "target score: " + target;
     }
 
@@ -67,8 +70,18 @@ public class StatSetterScript : MonoBehaviour
         ContextScript.instance.currentround++;
 
         DoItemLogic();
+        SelectorScript.instance.isPaused = true;
 
-        SceneManager.LoadScene("Shop");
+        if (PointsManagerScript.instance.CalculateMoney() >= 0)
+        {
+            wintext.text = "You gained.. " + PointsManagerScript.instance.CalculateMoney() + " money";
+        }
+        else
+        {
+            wintext.text = "You lost.. " + -PointsManagerScript.instance.CalculateMoney() + " money";
+        }
+
+        winscreen.SetActive(true);
     }
 
     public void DoItemLogic()

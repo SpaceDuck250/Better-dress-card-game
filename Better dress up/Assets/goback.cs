@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class goback : MonoBehaviour
 {
     public Dictionary<TypesScript.Clothingtype, int> typebasket = new Dictionary<TypesScript.Clothingtype, int>();
+    public GameObject restartpanel;
 
     public void Back()
     {
@@ -14,15 +15,32 @@ public class goback : MonoBehaviour
         }
         else
         {
-            Destroy(ContextScript.instance.gameObject);
-            SceneManager.LoadScene("StartMenu");
+            //Destroy(ContextScript.instance.gameObject);
+            //SceneManager.LoadScene("StartMenu");
             // Later change to start menu
+            if (restartpanel != null)
+            {
+                restartpanel.SetActive(true);
+                ShopSelect.instance.isSelectingItem = true;
+            }
+
         }
+    }
+
+    public void BackToStart()
+    {
+        Destroy(ContextScript.instance.gameObject);
+        SceneManager.LoadScene("StartMenu");
     }
 
     public void BackToPlay()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void GoToShop()
+    {
+        SceneManager.LoadScene("Shop");
     }
 
     public bool CheckIfViable()

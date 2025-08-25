@@ -9,6 +9,13 @@ public class ShopSelect : MonoBehaviour
     public GameObject buypanel;
     public bool isSelectingItem = false;
 
+    public static ShopSelect instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Update()
     {
         mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
