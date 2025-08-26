@@ -19,13 +19,18 @@ public class RandomScript : MonoBehaviour
     {
         GenerateRandomItems();
         GenerateRandomLocation();
-        GenerateRandomModel();
-        GenerateRandomPhotographer();
+        //GenerateRandomModel();
+        //GenerateRandomPhotographer();
     }
 
     // Like the old system we made, dynamically make each and change stats after
     public void GenerateRandomItems()
     {
+        if (ContextScript.instance.notownedclothingdatas.Count < 4)
+        {
+            return;
+        }
+
         int a = 0;
         foreach (var clothing in ContextScript.instance.notownedclothingdatas)
         {

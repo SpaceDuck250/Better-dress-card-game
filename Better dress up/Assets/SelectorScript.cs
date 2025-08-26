@@ -27,6 +27,7 @@ public class SelectorScript : MonoBehaviour
     private void Update()
     {
         mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
+        
         if (!isPaused)
         {
             Collider2D hit = Physics2D.OverlapPoint(mousepos);
@@ -38,6 +39,7 @@ public class SelectorScript : MonoBehaviour
                 BringCardUporDown(hit.gameObject);
                 SenderScript.instance.Fill();
                 OnClickNewItem.Invoke();
+                AudioScript.instance.PlayFx(AudioScript.instance.wear);
             }
         }
 

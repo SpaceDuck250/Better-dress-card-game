@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Nature Trail
   m_EditorClassIdentifier: 
   LocationName: Nature Trail
-  LocationImage: {fileID: -521776582124531554, guid: 8a531cb1d8f54ef439c490abe1809011, type: 3}
+  LocationImage: {fileID: 21300000, guid: 172e22f850412d044ad6b9b90b59faf2, type: 3}
   boostamount: 2
   styleboosted: 0
-  locationcost: 0
+  locationcost: 30

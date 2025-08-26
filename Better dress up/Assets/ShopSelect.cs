@@ -28,7 +28,8 @@ public class ShopSelect : MonoBehaviour
                 buyable = hit.GetComponent<IBuyable>();
                 isSelectingItem = true;
                 buypanel.SetActive(true);
-                
+                AudioScript.instance.PlayFx(AudioScript.instance.click);
+
             }
         }
 
@@ -37,8 +38,10 @@ public class ShopSelect : MonoBehaviour
     // tries to buy (if enough money) item
     public void TryBuy()
     {
+
         if (buyable.Buy())
         {
+            AudioScript.instance.PlayFx(AudioScript.instance.money);
             Debug.Log("Bought");
             CloseBuyPanel();
         }
@@ -50,6 +53,7 @@ public class ShopSelect : MonoBehaviour
 
     public void CloseBuyPanel()
     {
+        AudioScript.instance.PlayFx(AudioScript.instance.click);
         isSelectingItem = false;
         buypanel.SetActive(false);
     }

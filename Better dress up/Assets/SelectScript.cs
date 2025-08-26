@@ -26,7 +26,7 @@ public class SelectScript : MonoBehaviour
             selectedClothes.Remove(hit.GetComponent<ClothesScript>().ClothingData);
             hit.transform.Find("gray").gameObject.SetActive(false);
             Debug.Log("SAME OBJECT");
-
+            AudioScript.instance.PlayFx(AudioScript.instance.click);
             OnSelectNewCard();
 
             return;
@@ -41,12 +41,14 @@ public class SelectScript : MonoBehaviour
 
         selectedClothes.Add(hit.GetComponent<ClothesScript>().ClothingData);
         hit.gameObject.transform.Find("gray").gameObject.SetActive(true);
+        AudioScript.instance.PlayFx(AudioScript.instance.click);
 
         OnSelectNewCard();
     }
 
     public void OnSubmit()
     {
+        AudioScript.instance.PlayFx(AudioScript.instance.click);
         ContextScript.instance.selectedclothes.Clear();
         foreach (ClothingData c in selectedClothes)
         {

@@ -15,6 +15,7 @@ public class SortAnimScript : MonoBehaviour
 
     public void OnSelectNew(GameObject obj)
     {
+        AudioScript.instance.PlayFx(AudioScript.instance.click);
         if (selectedobj != null)
         {
             if (selectedobj.gameObject != obj)

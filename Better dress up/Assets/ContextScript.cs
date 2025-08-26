@@ -54,7 +54,7 @@ public class ContextScript : MonoBehaviour
     {
         currentlocation = currentlocationobj.GetComponent<LocationScript>();
         currentmodel = currentmodelobj.GetComponent<ModelScript>();
-
+        PickRandomLocation();
         Randomize(allshoes, 2, 1);
         Randomize(alldresses, 1, 1);
         Randomize(allelse, 2, 1);
@@ -94,6 +94,12 @@ public class ContextScript : MonoBehaviour
         clothings.Clear();
     }
 
+    public void PickRandomLocation()
+    {
+        int randomindex = Random.Range(0, 4);
 
+        currentlocationobj.GetComponent<LocationScript>().location = notownedlocationdatas[randomindex];
+        notownedlocationdatas.RemoveAt(randomindex);
+    }
 
 }

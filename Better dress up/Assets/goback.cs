@@ -9,6 +9,7 @@ public class goback : MonoBehaviour
 
     public void Back()
     {
+        AudioScript.instance.PlayFx(AudioScript.instance.click);
         if (CheckIfViable())
         {
             SceneManager.LoadScene("Select");
@@ -18,6 +19,8 @@ public class goback : MonoBehaviour
             //Destroy(ContextScript.instance.gameObject);
             //SceneManager.LoadScene("StartMenu");
             // Later change to start menu
+            AudioScript.instance.musicsrc.Pause();
+            AudioScript.instance.PlayFx(AudioScript.instance.lose);
             if (restartpanel != null)
             {
                 restartpanel.SetActive(true);
@@ -29,17 +32,22 @@ public class goback : MonoBehaviour
 
     public void BackToStart()
     {
+        AudioScript.instance.musicsrc.UnPause();
+        AudioScript.instance.PlayFx(AudioScript.instance.click);
         Destroy(ContextScript.instance.gameObject);
         SceneManager.LoadScene("StartMenu");
     }
 
     public void BackToPlay()
     {
+        AudioScript.instance.PlayFx(AudioScript.instance.click);
         SceneManager.LoadScene("SampleScene");
     }
 
     public void GoToShop()
     {
+        AudioScript.instance.musicsrc.UnPause();
+        AudioScript.instance.PlayFx(AudioScript.instance.click);
         SceneManager.LoadScene("Shop");
     }
 
