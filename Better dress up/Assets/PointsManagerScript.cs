@@ -83,7 +83,9 @@ public class PointsManagerScript : MonoBehaviour
                 colourmatches.Add(clothesscript.clothingcolour, 1);
             }
         }
-
+        
+        //c0)
+        //( > )
     }
 
     // Single calculations
@@ -170,3 +172,6 @@ public class PointsManagerScript : MonoBehaviour
     }
 
 }
+
+//c0)
+//( > )

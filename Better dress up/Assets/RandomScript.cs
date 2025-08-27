@@ -47,7 +47,7 @@ public class RandomScript : MonoBehaviour
 
             GameObject newclothingitem = Instantiate(cardtemplate, container);
 
-            newclothingitem.transform.position += new Vector3(2.4f * i, 0, 0);
+            newclothingitem.transform.position += new Vector3(2.9f * i, 0, 0);
             newclothingitem.GetComponent<ClothesScript>().ClothingData = ContextScript.instance.notownedclothingdatas[randomindex];
             newclothingitem.GetComponent<ClothesScript>().FillData();
             newclothingitem.GetComponent<IBuyable>().FillData(newclothingitem); // works for other types of items too

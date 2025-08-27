@@ -47,8 +47,9 @@ public class StatSetterScript : MonoBehaviour
 
     public void SetTargetScore()
     {
-        target = ContextScript.instance.currentPhotographer.GetComponent<PhotographerScript>().PhotographerData.photographercost + ContextScript.instance.currentmodel.ModelData.modelcost + ContextScript.instance.currentlocation.location.locationcost;
-        target = Mathf.RoundToInt(target * round * 1.12f);
+        target = 10;
+        target = Mathf.RoundToInt(target * round * Random.Range(1.1f, 2f));
+        target = Mathf.Clamp(target, 0, 300);
         targettext.text = "target score: " + target;
     }
 

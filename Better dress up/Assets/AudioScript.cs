@@ -16,6 +16,7 @@ public class AudioScript : MonoBehaviour
             DontDestroyOnLoad(gameObject);
 
             PlayMusic();
+            Screen.SetResolution(1920, 1080, true);
         }
         else
         {
